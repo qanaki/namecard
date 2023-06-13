@@ -1,0 +1,21 @@
+---
+
+version: '3.7'
+services:
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      #- '80:80'
+      - '443:443'
+    restart: always
+    environment:
+      STAGE: local # Don't use production until staging works
+      DOMAINS: 'localhost -> http://php:8000'
+      # FORCE_RENEW: 'true'
+  php:
+    #build: ./php-fpm
+    build: ./php
+    ports:
+    - 8080:8000
+    volumes:
+    - ./work:/work
