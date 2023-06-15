@@ -32,6 +32,7 @@
     <div>Loading, please wait...</div>
   </div>
   <a-scene
+    renderer="gammaOutput: true;"
     vr-mode-ui="enabled: false;"
     renderer="logarithmicDepthBuffer: true; precision: medium;"
     embedded
@@ -40,7 +41,7 @@
     <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
     <a-nft
       type="nft"
-      url="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+      url="./material/marker/namecard1"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
@@ -48,8 +49,8 @@
     >
       <a-entity
         gltf-model="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-        scale="5 5 5"
-        position="300 0 -100"
+        scale="15 15 15"
+        position="300 0 -300"
       >
       </a-entity>
     </a-nft>
